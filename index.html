@@ -3,11 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс: Главная страница</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
     <header>
       <a>
-        <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип магазина Девайс">
+        <img src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина Девайс">
       </a>
       <form method="post" action="https://echo.htmlacademy.ru">
         <input type="search" placeholder="Поиск по сайту">
@@ -42,14 +46,16 @@
 
     <main>
       <h1>Интернет-магазин гаджетов "Девайс"</h1>
-      <input type="radio" name="toggle" id="slider-1" checked>
-      <input type="radio" name="toggle" id="slider-2">
-      <input type="radio" name="toggle" id="slider-3">
+      <ul>
+        <li><a href="#">Слайдер 1</a></li>
+        <li><a href="#">Слайдер 2</a></li>
+        <li><a href="#">Слайдер 3</a></li>
+      </ul>
       <section>
         <ul>
           <li>
             <h2>Делай селфи, как Бен Стиллер!</h2>
-            <img src="https://via.placeholder.com/384x486" width="384" height="486" alt="Самая длинная палка для селфи в нашем магазине">
+            <img src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи в нашем магазине">
             <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <table>
               <tr>
@@ -67,7 +73,7 @@
           </li>
           <li>
             <h2>Худеем правильно!</h2>
-            <img src="https://via.placeholder.com/345x485" width="345" height="485" alt="Фитнес-браслет в нашем магазине">
+            <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет в нашем магазине">
             <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
             <table>
               <tr>
@@ -81,7 +87,7 @@
           </li>
           <li>
             <h2>Порхает как бабочка, жалит как пчела!</h2>
-            <img src="https://via.placeholder.com/526x334" width="526" height="334" alt="Квадрокоптер с мощным лазером в нашем магазине">
+            <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер с мощным лазером в нашем магазине">
             <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
             <table>
               <tr>
@@ -110,12 +116,11 @@
       </section>
       <section>
         <h2>Наши услуги</h2>
-        <input type="radio" name="service" id="service-delivery" checked>
-        <input type="radio" name="service" id="service-warranty">
-        <input type="radio" name="service" id="service-credit">
-        <label for="service-delivery">Доставка</label>
-        <label for="service-warranty">Гарантия</label>
-        <label for="service-credit">Кредит</label>
+        <ul>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Кредит</a></li>
+        </ul>
         <div>
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
@@ -155,7 +160,7 @@
           <h3>Контакты</h3>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <a href="#">
-            <img src="https://via.placeholder.com/560x222" width="560" height="222" alt="Наш офис на карте">
+            <img src="img/map-little.png" width="560" height="222" alt="Наш адрес: Санкт-Петербург, набережная реки Карповки, 5, литера П">
           </a>
           <a href="#">Напишите нам</a>
         </div>
@@ -165,7 +170,7 @@
     <footer>
       <div>
         <a>
-          <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип магазина Девайс">
+          <img src="img/logo-footer.svg" width="163" height="35" alt="Логотип магазина Девайс">
         </a>
         <div>
           <a href="#">Войти</a>
