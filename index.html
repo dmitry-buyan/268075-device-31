@@ -2,49 +2,52 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Девайс: Главная страница</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css.style.css">
   </head>
   <body>
-    <header>
-      <a>
-        <img src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина Девайс">
+    <header class="header">
+      <a class="header__logo logo">
+        <img class="logo__img" src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина Девайс">
       </a>
-      <form method="post" action="https://echo.htmlacademy.ru">
-        <input type="search" placeholder="Поиск по сайту">
-        <button type="submit">Найти</button>
+      <form class="header__search-form search-form" method="post" action="https://echo.htmlacademy.ru">
+        <input class="search-form__input" type="search" placeholder="Поиск по сайту">
+        <button class="search-form__button" type="submit">Найти</button>
       </form>
-      <div>
-        <a href="#">Войти</a>
+      <div class="header__auth auth-user">
+        <a class="auth-user__link auth-user__link--logedout" href="#">Войти</a>
       </div>
-      <ul>
+      <ul class="header__cart cart">
         <li><a href="#">Сравнить</a></li>
         <li><a href="#">Корзина</a></li>
       </ul>
-      <nav>
-        <ul>
-          <li>
-            <a>Каталог товаров</a>
-            <ul>
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="catalog.html">Моноподы для селфи</a></li>
-              <li><a href="#">Экшн-камеры</a></li>
-              <li><a href="#">Фитнес-браслеты</a></li>
-              <li><a href="#">Умные часы</a></li>
-              <li><a href="#">Квадрокоптер</a></li>
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link">Каталог товаров</a>
+            <ul class="main-nav__dropdown dropdown">
+              <li class="dropdown__item"><a class="dropdown__link" href="#">Виртуальная реальность</a></li>
+              <li class="dropdown__item"><a class="dropdown__link" href="catalog.html">Моноподы для селфи</a></li>
+              <li class="dropdown__item"><a class="dropdown__link" href="#">Экшн-камеры</a></li>
+              <li class="dropdown__item"><a class="dropdown__link" href="#">Фитнес-браслеты</a></li>
+              <li class="dropdown__item"><a class="dropdown__link" href="#">Умные часы</a></li>
+              <li class="dropdown__item"><a class="dropdown__link" href="#">Квадрокоптер</a></li>
             </ul>
           </li>
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Доставка</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Гарантия</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main class="content">
       <h1>Интернет-магазин гаджетов "Девайс"</h1>
       <ul>
         <li><a href="#">Слайдер 1</a></li>
