@@ -57,6 +57,7 @@
   --status-normal: #f2f2f2;
   --status-hover: #eaeaea;
   --status-invalid: #f6dada;
+  --status-disabled: #a6a6a6;
 }
 
 body {
@@ -94,7 +95,7 @@ a {
   font-size: 18px;
   line-height: 22px;
   font-family: "Gilroy", "Arial", "Helvetica", sans-serif;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-align: center;
   color: var(--basic-black);
@@ -147,13 +148,22 @@ a {
   background-color: rgba(240, 197, 46, 0.3);
 }
 
-/*****************
+/***************************************************
 
-      HEADER
+                    HEADER
 
-*****************/
+***************************************************/
 .header {
   background-color: var(--special-yellow);
+}
+
+.page-inner .logo:hover,
+.page-inner .logo:focus {
+  opacity: 0.6;
+}
+
+.page-inner .logo:active {
+  opacity: 0.3;
 }
 
 /************ Search Form ************/
@@ -201,6 +211,10 @@ a {
 }
 
 .auth__link:active {
+  opacity: 0.3;
+}
+
+.auth__link--loggedin {
   opacity: 0.3;
 }
 
@@ -259,11 +273,11 @@ a {
   opacity: 0.3;
 }
 
-/*****************
+/***************************************************
 
-      MAIN
+                    MAIN
 
-*****************/
+***************************************************/
 
 /************ Slider Controls ************/
 
@@ -340,11 +354,11 @@ a {
   list-style-type: none;
 }
 
-/*****************
+/***************************************************
 
-      FOOTER
+                    FOOTER
 
-*****************/
+***************************************************/
 
 .footer {
   color: var(--basic-white);
@@ -399,11 +413,94 @@ a {
   list-style-type: none;
 }
 
-/*****************
+/***************************************************
 
-      POPUP
+                    CATALOG
 
-*****************/
+***************************************************/
+
+.catalog__title {
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+  font-family: "Gilroy", "Arial", "Helvetica", sans-serif;
+}
+
+/************ Breadcrumbs ************/
+
+.breadcrumbs {
+  list-style-type: none;
+}
+
+.breadcrumbs__link {
+  opacity: 0.3;
+}
+
+.breadcrumbs__link:hover,
+.breadcrumbs__link:focus {
+  opacity: 0.6;
+}
+
+.breadcrumbs__link:active {
+  opacity: 0.1;
+}
+
+/************ Filter ************/
+
+.filter__title {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Gilroy", "Arial", "Helvetica", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.form-filter__group {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.form-filter__group--price {
+  line-height: 16px;
+  font-family: "Gilroy", "Arial", "Helvetica", sans-serif;
+}
+
+.form-filter__title {
+  font-weight: 800;
+  line-height: 17px;
+  font-family: "Gilroy", "Arial", "Helvetica", sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.form-filter__list {
+  list-style-type: none;
+}
+
+.form-filter__input:disabled + .form-filter__label {
+  color: var(--status-disabled);
+}
+
+/************ Sorting ************/
+
+.sorting__title {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Gilroy", "Arial", "Helvetica", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sorting__list {
+  list-style-type: none;
+}
+
+/***************************************************
+
+                    POPUP
+
+***************************************************/
 
 /************ Feedback ************/
 
