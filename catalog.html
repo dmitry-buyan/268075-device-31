@@ -66,7 +66,9 @@
         </div>
         <div class="catalog__grid-content">
           <section class="catalog__filter filter">
-            <h2 class="filter__title">Фильтр:</h2>
+            <div class="filter__title-wrap">
+              <h2 class="filter__title">Фильтр:</h2>
+            </div>
             <form class="filter__form form-filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="form-filter__group form-filter__group--price">
                 <legend class="form-filter__title">Стоимость</legend>
@@ -117,19 +119,19 @@
               <button class="form-filter__button button" type="submit">Показать</button>
             </form>
           </section>
+          <section class="catalog__sorting sorting">
+            <h2 class="sorting__title">Сортировка:</h2>
+            <ul class="sorting__list list-reset">
+              <li class="sorting__item"><a class="sorting__link sorting__link--current" href="#">По цене</a></li>
+              <li class="sorting__item"><a class="sorting__link" href="#">По типу</a></li>
+              <li class="sorting__item"><a class="sorting__link" href="#">По популярности</a></li>
+            </ul>
+            <ul class="sorting__list list-reset">
+              <li class="sorting__item"><a class="sorting__link" href="#">По возрастанию</a></li>
+              <li class="sorting__item"><a class="sorting__link sorting__link--current" href="#">По убыванию</a></li>
+            </ul>
+          </section>
           <section class="catalog__products products">
-            <div class="catalog__sorting sorting">
-              <h2 class="sorting__title">Сортировка:</h2>
-              <ul class="sorting__list list-reset">
-                <li class="sorting__item"><a class="sorting__link sorting__link--current" href="#">По цене</a></li>
-                <li class="sorting__item"><a class="sorting__link" href="#">По типу</a></li>
-                <li class="sorting__item"><a class="sorting__link" href="#">По популярности</a></li>
-              </ul>
-              <ul class="sorting__list list-reset">
-                <li class="sorting__item"><a class="sorting__link" href="#">По возрастанию</a></li>
-                <li class="sorting__item"><a class="sorting__link sorting__link--current" href="#">По убыванию</a></li>
-              </ul>
-            </div>
             <h2 class="visually-hidden">Список моноподов для селфи</h2>
             <ul class="products__grid list-reset">
               <li class="products__grid-item">
