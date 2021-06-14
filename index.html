@@ -34,7 +34,7 @@
       </div>
       <nav class="header__nav nav">
         <ul class="nav__list nav__list--first list-reset">
-          <li class="nav__item">
+          <li class="nav__item nav__item--catalog">
             <a class="nav__link nav__link--header" href="#">Каталог товаров</a>
             <ul class="nav__dropdown dropdown list-reset">
               <li class="dropdown__item"><a class="dropdown__link" href="#">Виртуальная реальность</a></li>
@@ -177,10 +177,18 @@
       <section class="main__brands brands container">
         <h2 class="visually-hidden">Бестселлеры</h2>
         <div class="brands__grid">
-          <a class="brand" href="#">DJI</a>
-          <a class="brand" href="#">SP Gadgets</a>
-          <a class="brand" href="#">GoPro</a>
-          <a class="brand" href="#">Vive</a>
+          <a class="brand" href="#">
+            <img src="img/logo-1.png" width="260" height="100" alt="Логотопи компании DJI">
+          </a>
+          <a class="brand" href="#">
+            <img src="img/logo-2.png" width="260" height="100" alt="Логотопи компании SP Gadgets">
+          </a>
+          <a class="brand" href="#">
+            <img src="img/logo-3.png" width="260" height="100" alt="Логотопи компании GoPro">
+          </a>
+          <a class="brand" href="#">
+            <img src="img/logo-4.png" width="260" height="100" alt="Логотопи компании Vive">
+          </a>
         </div>
       </section>
       <div class="info container">
@@ -250,7 +258,7 @@
     <section class="map">
       <h2 class="visually-hidden">Мы на карте</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8300125432288!2d30.31430331621206!3d59.96814316667999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bcebbd7f3%3A0xe0d833dfef898281!2sNaberezhnaya%20Reki%20Karpovki%2C%205%2C%20Sankt-Peterburg%2C%20197022!5e0!3m2!1sen!2sru!4v1621618184410!5m2!1sen!2sru" width="960" height="573" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      <button class="button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <button class="map__button-close button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
     <section class="feedback">
@@ -270,7 +278,7 @@
         </div>
         <button class="feedback__button button" type="submit">Отправить</button>
       </form>
-      <button class="button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      <button class="feedback__button-close button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
   </body>
 </html>
