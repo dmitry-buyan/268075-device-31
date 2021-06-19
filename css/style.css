@@ -48,6 +48,7 @@
   --basic-grey: #464646;
   --basic-half-grey: #7e7e7e;
   --basic-grey-light: #e5e5e5;
+  --basic-silver: #c4c4c4;
   --basic-white: #ffffff;
   --basic-gainsboro: #dcdcdc;
   --basic-gainsboro-light: #d9d9d9;
@@ -82,6 +83,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .visually-hidden {
@@ -734,7 +736,7 @@ img {
 .service::before {
   position: absolute;
   top: 0;
-  left: 622px;
+  right: 0;
   content: "";
 }
 
@@ -1041,20 +1043,33 @@ img {
   display: flex;
 }
 
+.breadcrumbs__item {
+  margin-right: 14px;
+}
+
 .breadcrumbs__link {
-  padding-right: 40px;
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 19px;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs__item:not(:last-child) .breadcrumbs__link::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-left: 14px;
+  background: url("../img/icon-arrow-nav.svg") no-repeat center;
 }
 
 .breadcrumbs__link:hover,
 .breadcrumbs__link:focus {
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .breadcrumbs__link:active {
-  opacity: 0.1;
+  color: rgba(0, 0, 0, 0.1);
 }
 
 /************ Filter ************/
@@ -1143,6 +1158,54 @@ img {
   font-family: "Gilroy", "Arial", sans-serif;
 }
 
+.price__toggles {
+  position: relative;
+  width: 200px;
+  height: 20px;
+}
+
+.price__scale {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--basic-black);
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.2;
+}
+
+.price__bar {
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background-color: var(--special-green);
+  ;
+}
+
+.price__toggle {
+  position: absolute;
+  top: 50%;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--basic-silver);
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.18);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.price__toggle--min {
+  left: 0;
+}
+
+.price__toggle--max {
+  left: 114px;
+}
+
 .form-filter__title {
   margin: 0;
   margin-bottom: 30px;
@@ -1164,7 +1227,7 @@ img {
 .price .form-filter__input {
   margin: 0 5px;
   padding: 5px;
-  max-width: 60px;
+  width: 60px;
 }
 
 .color__list {
@@ -1199,11 +1262,13 @@ img {
   cursor: pointer;
 }
 
-.color__item:hover .color__name::before {
+.color__item:hover .color__name::before,
+.color__input:focus ~ .color__name::before {
   opacity: 0.6;
 }
 
-.color__input:checked ~ .color__name::before {
+.color__input:checked ~ .color__name::before,
+.color__input:not(:checked):active ~ .color__name::before {
   background-image: url("../img/checkbox-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1218,6 +1283,54 @@ img {
 .color__input:disabled ~ .color__name::before {
   opacity: 0.25;
   cursor: default;
+}
+
+.color__input:checked:active ~ .color__name::before {
+  background: none;
+}
+
+.bluetooth__item {
+  display: flex;
+}
+
+.bluetooth__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.bluetooth__option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bluetooth__option::before {
+  box-sizing: border-box;
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  border: 2px solid var(--basic-black);
+  border-radius: 50%;
+}
+
+.bluetooth__input:checked ~ .bluetooth__option::after {
+  position: absolute;
+  left: 8px;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: var(--basic-black);
+  border-radius: 50%;
+}
+
+.bluetooth__option:hover::before,
+.bluetooth__option:hover::after {
+  opacity: 0.6;
+}
+
+.bluetooth__input:active ~ .bluetooth__option::after,
+.bluetooth__input:active ~ .bluetooth__option::before {
+  opacity: 1;
 }
 
 /************ Sorting ************/
@@ -1269,6 +1382,8 @@ img {
 }
 
 .sorting__list--second {
+  display: flex;
+  column-gap: 16px;
   margin-left: auto;
 }
 
@@ -1276,9 +1391,29 @@ img {
   opacity: 0.3;
 }
 
+.sorting__link--up,
+.sorting__link--down {
+  display: block;
+  width: 18px;
+  height: 18px;
+  opacity: 0.2;
+  background: url("../img/sort-icon-up.svg") no-repeat center;
+}
+
+.sorting__link--down {
+  transform: rotate(180deg);
+}
+
 .sorting__link:hover,
 .sorting__link:focus {
   opacity: 0.6;
+}
+
+.sorting__link--up:hover,
+.sorting__link--up:focus,
+.sorting__link--down:hover,
+.sorting__link--down:focus {
+  opacity: 0.4;
 }
 
 .sorting__link--current,

@@ -152,12 +152,31 @@
         </form>
         <div class="header__user user-block">
           <div class="auth">
-            <a class="user-block__link auth__link" href="#">Валентин Петухов</a>
+            <a class="user-block__link auth__link" href="#">
+              <svg class="user-block__icon user-block__icon--header" width="9" height="9">
+                <use xlink:href="#icon-user-header"></use>
+              </svg>
+              Валентин Петухов
+            </a>
             <a class="user-block__link auth__link auth__link--loggedin" href="#">Выйти</a>
           </div>
           <ul class="header__cart cart list-reset">
-            <li><a class="user-block__link" href="#">Сравнить</a></li>
-            <li><a class="user-block__link" href="#">Корзина</a></li>
+            <li>
+              <a class="user-block__link" href="#">
+                <svg class="user-block__icon user-block__icon--header" width="8" height="8">
+                  <use xlink:href="#icon-chart-header"></use>
+                </svg>
+                Сравнить
+              </a>
+            </li>
+            <li>
+              <a class="user-block__link" href="#">
+                <svg class="user-block__icon user-block__icon--header" width="10" height="10">
+                  <use xlink:href="#icon-cart-header"></use>
+                </svg>
+                Корзина
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -190,7 +209,7 @@
           <ul class="catalog__breadcrumbs breadcrumbs list-reset">
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
             <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a></li>
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current">Моноподы для селфи</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--current" href="#">Моноподы для селфи</a></li>
           </ul>
         </div>
         <div class="catalog__grid-content">
@@ -201,7 +220,14 @@
             <form class="filter__form form-filter" method="get" action="https://echo.htmlacademy.ru">
               <div class="price form-filter__wrap">
                 <h3 class="form-filter__title">Стоимость</h3>
-                <div class="form-filter__wrap-inner">
+                <div class="price__toggles">
+                  <div class="price__scale">
+                    <div class="price__bar" style="width: 110px; margin-left: 12px;"></div>
+                  </div>
+                  <button class="price__toggle price__toggle--min" type="button" style="left: 0"></button>
+                  <button class="price__toggle price__toggle--max" type="button" style="left: 114px"></button>
+                </div>
+                <div class="price__controls form-filter__wrap-inner">
                   <label for="value-min">от </label>
                   <input class="form-filter__input" id="value-min" type="number" min="0" placeholder="0">
                   <label for="value-max">до </label>
@@ -235,16 +261,14 @@
               </div>
               <div class="bluetooth form-filter__wrap">
                 <h3 class="form-filter__title">Bluetooth</h3>
-                <ul class="form-filter__list list-reset">
-                  <li class="form-filter__item">
-                    <input class="form-filter__input visually-hidden" id="filter-bluetooth-true" type="radio" name="bluetooth" value="bluetooth-true" checked>
-                    <label class="form-filter__label" for="filter-bluetooth-true">Есть</label>
-                  </li>
-                  <li class="form-filter__item">
-                    <input class="form-filter__input visually-hidden" id="filter-bluetooth-false" type="radio" name="bluetooth" value="bluetooth-false">
-                    <label class="form-filter__label" for="filter-bluetooth-false">Нет</label>
-                  </li>
-                </ul>
+                <div class="bluetooth__item">
+                  <input class="bluetooth__input visually-hidden" id="bluetooth-on" type="radio" name="bluetooth" value="on" checked>
+                  <label class="bluetooth__option bluetooth__option--on" for="bluetooth-on">Есть</label>
+                </div>
+                <div class="bluetooth__item">
+                  <input class="bluetooth__input visually-hidden" id="bluetooth-off" type="radio" name="bluetooth" value="off">
+                  <label class="bluetooth__option bluetooth__option--off" for="bluetooth-off">Нет</label>
+                </div>
               </div>
               <button class="form-filter__button button" type="submit">Показать</button>
             </form>
@@ -257,8 +281,8 @@
               <li class="sorting__item"><a class="sorting__link" href="#">По популярности</a></li>
             </ul>
             <ul class="sorting__list sorting__list--second list-reset">
-              <li class="sorting__item"><a class="sorting__link" href="#">По возрастанию</a></li>
-              <li class="sorting__item"><a class="sorting__link sorting__link--current" href="#">По убыванию</a></li>
+              <li class="sorting__item"><a class="sorting__link sorting__link--up" href="#" aria-label="По возрастанию"></a></li>
+              <li class="sorting__item"><a class="sorting__link sorting__link--down sorting__link--current" href="#" aria-label="По убыванию"></a></li>
             </ul>
           </section>
           <section class="catalog__products products">
@@ -339,12 +363,31 @@
           </a>
           <div class="footer__user user-block">
             <div class="auth">
-              <a class="user-block__link" href="#">Валентин Петухов</a>
+              <a class="user-block__link" href="#">
+                <svg class="user-block__icon user-block__icon--footer" width="9" height="9">
+                  <use xlink:href="#icon-user-footer"></use>
+                </svg>
+                Валентин Петухов
+              </a>
               <a class="user-block__link auth__link auth__link--loggedin-footer" href="#">Выйти</a>
             </div>
             <ul class="footer__cart cart list-reset">
-              <li><a class="user-block__link" href="#">Сравнить</a></li>
-              <li><a class="user-block__link" href="#">Корзина</a></li>
+              <li>
+                <a class="user-block__link" href="#">
+                  <svg class="user-block__icon user-block__icon--footer" width="8" height="8">
+                    <use xlink:href="#icon-chart-footer"></use>
+                  </svg>
+                  Сравнить
+                </a>
+              </li>
+              <li>
+                <a class="user-block__link" href="#">
+                  <svg class="user-block__icon user-block__icon--footer" width="10" height="10">
+                    <use xlink:href="#icon-cart-footer"></use>
+                  </svg>
+                  Корзина
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -360,11 +403,36 @@
         <section class="footer__row footer__bottom socials">
           <h2 class="visually-hidden">Мы в соцсетях</h2>
           <ul class="socials__list list-reset">
-            <li class="socials__item"><a class="socials__link" href="">Наш Фейсбук</a></li>
-            <li class="socials__item"><a class="socials__link" href="">Наш Инстаграм</a></li>
-            <li class="socials__item"><a class="socials__link" href="">Наш Твиттер</a></li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <svg class="socials__link-icon" width="32" height="32">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              <span class="visually-hidden">Наш Фейсбук</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <svg class="socials__link-icon" width="32" height="32">
+                  <use xlink:href="#instagram"></use>
+                </svg>
+              <span class="visually-hidden">Наш Инстаграм</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <svg class="socials__link-icon" width="32" height="32">
+                  <use xlink:href="#twitter"></use>
+                </svg>
+              <span class="visually-hidden">Наш Твиттер</span>
+              </a>
+            </li>
           </ul>
-          <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/htmlcss">Разработано HTML Academy</a>
+          <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Разработано HTML Academy">
+            <svg class="copyright__icon" width="115" height="33">
+              <use xlink:href="#logo_htmlacademy"></use>
+            </svg>
+          </a>
         </section>
       </div>
     </footer>
