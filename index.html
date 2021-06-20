@@ -8,7 +8,7 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -153,7 +153,7 @@
         <div class="header__user user-block">
           <div class="auth">
             <a class="user-block__link auth__link auth__link--loggedout" href="#">
-              <svg class="user-block__icon user-block__icon--header" width="9" height="9">
+              <svg class="user-block__icon user-block__icon--header" width="11" height="11">
                 <use xlink:href="#icon-user-header"></use>
               </svg>
               Войти
@@ -162,7 +162,7 @@
           <ul class="header__cart cart list-reset">
             <li>
               <a class="user-block__link" href="#">
-                <svg class="user-block__icon user-block__icon--header" width="8" height="8">
+                <svg class="user-block__icon user-block__icon--header" width="15" height="11">
                   <use xlink:href="#icon-chart-header"></use>
                 </svg>
                 Сравнить
@@ -204,68 +204,66 @@
     <main>
       <div class="container">
         <h1 class="visually-hidden">Интернет-магазин гаджетов "Девайс"</h1>
-        <section class="main__promo promo">
-          <ul class="promo__list grid list-reset">
-            <li class="promo__item grid__item">
-              <div class="slider slider--1 slider--current">
-                <h2 class="slider__title title">Порхает как бабочка, жалит как пчела!</h2>
-                <img class="slider__img" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер с мощным лазером в нашем магазине">
-                <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                <dl class="slider__options">
-                  <div class="slider__options-wrap">
-                    <dt class="slider__char">Дальность полета</dt>
-                    <dd class="slider__value">800 м</dd>
-                  </div>
-                  <div class="slider__options-wrap">
+        <section class="main__promo">
+          <div class="slider slider--1 slider--current">
+            <h2 class="slider__title title">Порхает как бабочка, жалит как пчела!</h2>
+            <div class="slider__img-wrap">
+              <img class="slider__img" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер с мощным лазером в нашем магазине">
+            </div>
+            <p class="slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <dl class="slider__options">
+              <div class="slider__options-wrap">
+                <dt class="slider__char">Дальность полета</dt>
+                <dd class="slider__value">800 м</dd>
+              </div>
+              <div class="slider__options-wrap">
 
-                    <dt class="slider__char">Радиус поражения</dt>
-                    <dd class="slider__value">50 м</dd>
-                  </div>
-                </dl>
-                <a class="slider__button button" href="#">Подробнее</a>
+                <dt class="slider__char">Радиус поражения</dt>
+                <dd class="slider__value">50 м</dd>
               </div>
-            </li>
-            <li class="promo__item grid__item">
-              <div class="slider slider--2">
-                <h2 class="slider__title title">Худеем правильно!</h2>
-                <img class="slider__img" src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет в нашем магазине">
-                <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-                <dl class="slider__options">
-                  <div class="slider__options-wrap">
-                    <dt class="slider__char">Без подзарядки</dt>
-                    <dd class="slider__value">48 часов</dd>
-                  </div>
-                </dl>
-                <a class="slider__button button" href="#">Подробнее</a>
+            </dl>
+            <a class="slider__button button" href="#">Подробнее</a>
+          </div>
+          <div class="slider slider--2">
+            <h2 class="slider__title title">Худеем<br> правильно!</h2>
+            <div class="slider__img-wrap">
+              <img class="slider__img" src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет в нашем магазине">
+            </div>
+            <p class="slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <dl class="slider__options">
+              <div class="slider__options-wrap">
+                <dt class="slider__char">Без подзарядки</dt>
+                <dd class="slider__value">48 часов</dd>
               </div>
-            </li>
-            <li class="promo__item grid__item">
-              <div class="slider slider--3">
-                <h2 class="slider__title title">Делай селфи,<br> как Бен Стиллер!</h2>
-                <img class="slider__img" src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи в нашем магазине">
-                <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                <dl class="slider__options">
-                  <div class="slider__options-wrap">
-                    <dt class="slider__char">Длина палки</dt>
-                    <dd class="slider__value">8,5 м</dd>
-                  </div>
-                  <div class="slider__options-wrap">
-                    <dt class="slider__char">Вес палки</dt>
-                    <dd class="slider__value">5 кг</dd>
-                  </div>
-                  <div class="slider__options-wrap">
-                    <dt class="slider__char">Материал</dt>
-                    <dd class="slider__value">Карбон</dd>
-                  </div>
-                </dl>
-                <a class="slider__button button" href="#">Подробнее</a>
+            </dl>
+            <a class="slider__button button" href="#">Подробнее</a>
+          </div>
+          <div class="slider slider--3">
+            <h2 class="slider__title title">Делай селфи,<br> как Бен Стиллер!</h2>
+            <div class="slider__img-wrap">
+              <img class="slider__img" src="img/slider-1.png" width="384" height="486" alt="Самая длинная палка для селфи в нашем магазине">
+            </div>
+            <p class="slider__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <dl class="slider__options">
+              <div class="slider__options-wrap">
+                <dt class="slider__char">Длина палки</dt>
+                <dd class="slider__value">8,5 м</dd>
               </div>
-            </li>
-          </ul>
-          <div class="slider-nav">
-            <button class="slider-nav__item slider-nav__item--current" aria-label="Слайдер 1"></button>
-            <button class="slider-nav__item" aria-label="Слайдер 2"></button>
-            <button class="slider-nav__item" aria-label="Слайдер 3"></button>
+              <div class="slider__options-wrap">
+                <dt class="slider__char">Вес палки</dt>
+                <dd class="slider__value">5 кг</dd>
+              </div>
+              <div class="slider__options-wrap">
+                <dt class="slider__char">Материал</dt>
+                <dd class="slider__value">Карбон</dd>
+              </div>
+            </dl>
+            <a class="slider__button button" href="#">Подробнее</a>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-controls__item slider-controls__item--current" aria-label="Слайдер 1"></button>
+            <button class="slider-controls__item" aria-label="Слайдер 2"></button>
+            <button class="slider-controls__item" aria-label="Слайдер 3"></button>
           </div>
         </section>
         <section class="main__popular popular">
@@ -422,7 +420,7 @@
           <div class="footer__user user-block">
             <div class="auth">
               <a class="user-block__link auth__link auth__link--loggedout" href="#">
-                <svg class="user-block__icon user-block__icon--footer" width="9" height="9">
+                <svg class="user-block__icon user-block__icon--footer" width="11" height="11">
                   <use xlink:href="#icon-user-footer"></use>
                 </svg>
                 Войти
@@ -431,7 +429,7 @@
             <ul class="footer__cart cart list-reset">
               <li>
                 <a class="user-block__link" href="#">
-                  <svg class="user-block__icon user-block__icon--footer" width="8" height="8">
+                  <svg class="user-block__icon user-block__icon--footer" width="15" height="11">
                     <use xlink:href="#icon-chart-footer"></use>
                   </svg>
                   Сравнить
@@ -494,13 +492,13 @@
       </div>
     </footer>
 
-    <section class="map">
+    <section class="modal map">
       <h2 class="visually-hidden">Мы на карте</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8300125432288!2d30.31430331621206!3d59.96814316667999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bcebbd7f3%3A0xe0d833dfef898281!2sNaberezhnaya%20Reki%20Karpovki%2C%205%2C%20Sankt-Peterburg%2C%20197022!5e0!3m2!1sen!2sru!4v1621618184410!5m2!1sen!2sru" width="960" height="573" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8300125432288!2d30.31430331621206!3d59.96814316667999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bcebbd7f3%3A0xe0d833dfef898281!2sNaberezhnaya%20Reki%20Karpovki%2C%205%2C%20Sankt-Peterburg%2C%20197022!5e0!3m2!1sen!2sru!4v1621618184410!5m2!1sen!2sru" width="960" height="573" style="border: 0;" allowfullscreen="" loading="lazy" title="Наша компании находится по адресу: Санкт-Петербург, набережная реки Карповки, 5, литера П."></iframe>
       <button class="map__button-close button-close" type="button"><span class="visually-hidden">Закрыть</span></button>
     </section>
 
-    <section class="feedback">
+    <section class="modal feedback">
       <h2 class="visually-hidden">Форма обратной связи с нами</h2>
       <form class="feedback__form form" method="post" action="https://echo.htmlacademy.ru">
         <div class="field">
