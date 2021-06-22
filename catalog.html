@@ -152,7 +152,7 @@
         <div class="header__user user-block">
           <div class="auth">
             <a class="user-block__link auth__link" href="#">
-              <svg class="user-block__icon user-block__icon--header" width="9" height="9">
+              <svg class="user-block__icon user-block__icon--header" width="10" height="11">
                 <use xlink:href="#icon-user-header"></use>
               </svg>
               Валентин Петухов
@@ -162,7 +162,7 @@
           <ul class="header__cart cart list-reset">
             <li>
               <a class="user-block__link" href="#">
-                <svg class="user-block__icon user-block__icon--header" width="8" height="8">
+                <svg class="user-block__icon user-block__icon--header" width="15" height="11">
                   <use xlink:href="#icon-chart-header"></use>
                 </svg>
                 Сравнить
@@ -217,24 +217,28 @@
               <h2 class="filter__title">Фильтр:</h2>
             </div>
             <form class="filter__form form-filter" method="get" action="https://echo.htmlacademy.ru">
-              <div class="price form-filter__wrap">
-                <h3 class="form-filter__title">Стоимость</h3>
+              <div class="price form-filter__wrap form-filter__price">
+                <h3 class="form-filter__title price__title">Стоимость</h3>
                 <div class="price__toggles">
                   <div class="price__scale">
-                    <div class="price__bar" style="width: 110px; margin-left: 12px;"></div>
+                    <div class="price__bar"></div>
                   </div>
-                  <button class="price__toggle price__toggle--min" type="button" style="left: 0"></button>
-                  <button class="price__toggle price__toggle--max" type="button" style="left: 114px"></button>
+                  <button class="price__toggle price__toggle--min" type="button"></button>
+                  <button class="price__toggle price__toggle--max" type="button"></button>
                 </div>
                 <div class="price__controls form-filter__wrap-inner">
-                  <label for="value-min">от </label>
-                  <input class="form-filter__input" id="value-min" type="number" min="0" placeholder="0">
-                  <label for="value-max">до </label>
-                  <input class="form-filter__input" id="value-max" type="number" min="0" max="10000" placeholder="5000">
+                  <div class="price__min-wrap">
+                    <label for="value-min">от </label>
+                    <input class="form-filter__input" id="value-min" type="number" min="0" placeholder="0">
+                  </div>
+                  <div class="price__max-wrap">
+                    <label for="value-max">до </label>
+                    <input class="form-filter__input" id="value-max" type="number" min="0" max="10000" placeholder="5000">
+                  </div>
                 </div>
               </div>
-              <div class="color form-filter__wrap">
-                <h3 class="form-filter__title">Цвет</h3>
+              <div class="color form-filter__wrap form-filter__color">
+                <h3 class="form-filter__title color__title">Цвет</h3>
                 <ul class="color__list list-reset">
                   <li class="color__item">
                     <input class="color__input visually-hidden" id="filter-color-black" type="checkbox" name="black" checked>
@@ -258,8 +262,8 @@
                   </li>
                 </ul>
               </div>
-              <div class="bluetooth form-filter__wrap">
-                <h3 class="form-filter__title">Bluetooth</h3>
+              <div class="bluetooth form-filter__wrap form-filter__bluetooth">
+                <h3 class="form-filter__title bluetooth__title">Bluetooth</h3>
                 <div class="bluetooth__item">
                   <input class="bluetooth__input visually-hidden" id="bluetooth-on" type="radio" name="bluetooth" value="on" checked>
                   <label class="bluetooth__option bluetooth__option--on" for="bluetooth-on">Есть</label>
@@ -341,13 +345,13 @@
               </li>
             </ul>
             <div class="pagination">
-              <a class="pagination__button" href="#">Назад</a>
+              <button class="pagination__button pagination__button--prev">Назад</button>
               <ul class="pagination__list list-reset">
                 <li class="pagination__item"><a class="pagination__link pagination__link--current" href="#">1</a></li>
                 <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
                 <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
               </ul>
-              <a class="pagination__button" href="#">Вперед</a>
+              <button class="pagination__button pagination__button--next">Вперед</button>
             </div>
           </section>
         </div>
@@ -363,7 +367,7 @@
           <div class="footer__user user-block">
             <div class="auth">
               <a class="user-block__link" href="#">
-                <svg class="user-block__icon user-block__icon--footer" width="9" height="9">
+                <svg class="user-block__icon user-block__icon--footer" width="13" height="9">
                   <use xlink:href="#icon-user-footer"></use>
                 </svg>
                 Валентин Петухов
@@ -373,7 +377,7 @@
             <ul class="footer__cart cart list-reset">
               <li>
                 <a class="user-block__link" href="#">
-                  <svg class="user-block__icon user-block__icon--footer" width="8" height="8">
+                  <svg class="user-block__icon user-block__icon--footer" width="15" height="11">
                     <use xlink:href="#icon-chart-footer"></use>
                   </svg>
                   Сравнить
