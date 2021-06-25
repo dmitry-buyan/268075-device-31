@@ -1661,6 +1661,7 @@ img {
 
 .modal {
   position: fixed;
+  top: 40px;
   left: 50%;
   z-index: 800;
   display: none;
@@ -1670,10 +1671,6 @@ img {
 }
 
 /************ Map ************/
-
-.map-show {
-  display: block;
-}
 
 .map iframe {
   display: block;
@@ -1692,6 +1689,11 @@ img {
   padding: 92px 100px 60px 100px;
   font-family: "Gilroy", "Arial", sans-serif;
   background-color: var(--basic-white);
+}
+
+.feedback-show {
+  display: grid;
+  animation: bounce 0.7s;
 }
 
 .feedback__form {
@@ -1748,7 +1750,7 @@ img {
   outline: 2px solid var(--special-yellow);
 }
 
-.field__input:invalid {
+.field__input--required {
   background-color: var(--status-invalid);
 }
 
@@ -1767,4 +1769,14 @@ img {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -2000px);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
