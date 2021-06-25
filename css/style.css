@@ -1671,6 +1671,10 @@ img {
 
 /************ Map ************/
 
+.map-show {
+  display: block;
+}
+
 .map iframe {
   display: block;
 }
