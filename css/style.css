@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 @font-face {
   font-family: "Gilroy";
   font-weight: 300;
@@ -93,7 +100,8 @@ img {
   padding: 0;
   border: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -221,7 +229,8 @@ img {
 .header__top {
   display: grid;
   grid-template-columns: repeat(12, 60px);
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   margin-bottom: 34px;
 }
 
@@ -287,8 +296,24 @@ img {
   background: transparent url("../img/search.svg") no-repeat left center;
 }
 
+.search-form__input::-webkit-input-placeholder {
+  opacity: 0.3;
+}
+
+.search-form__input::-moz-placeholder {
+  opacity: 0.3;
+}
+
 .search-form__input::placeholder {
   opacity: 0.3;
+}
+
+.search-form__input:hover::-webkit-input-placeholder, .search-form__input:focus::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.search-form__input:hover::-moz-placeholder, .search-form__input:focus::-moz-placeholder {
+  opacity: 0.6;
 }
 
 .search-form__input:hover::placeholder,
@@ -299,6 +324,14 @@ img {
 .search-form__input:focus,
 .search-form__input:active {
   border-bottom-color: var(--basic-black);
+}
+
+.search-form__input:active::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.search-form__input:active::-moz-placeholder {
+  opacity: 1;
 }
 
 .search-form__input:active::placeholder {
@@ -336,18 +369,21 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-start ;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 }
 
 .user-block__link {
   display: flex;
   align-items: center;
-  column-gap: 13px;
+  -moz-column-gap: 13px;
+       column-gap: 13px;
 }
 
 .auth {
   display: flex;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 
 .header__user .user-block__link:hover,
@@ -365,7 +401,8 @@ img {
 
 .cart {
   display: flex;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 }
 
 /************ Main Navigation ************/
@@ -400,8 +437,10 @@ img {
 .nav__list--second {
   display: grid;
   width: 500px;
+  grid-template-columns: -webkit-min-content -webkit-min-content 1fr;
   grid-template-columns: min-content min-content 1fr;
-  column-gap: 35px;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
 }
 
 .nav__list--second .nav__item {
@@ -447,7 +486,8 @@ img {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: repeat(3, auto);
-  column-gap: 65px;
+  -moz-column-gap: 65px;
+       column-gap: 65px;
   row-gap: 16px;
   width: 100%;
   min-height: 145px;
@@ -498,8 +538,10 @@ img {
   display: none;
   min-height: 506px;
   grid-template-columns: repeat(12, 60px);
+  grid-template-rows: -webkit-min-content -webkit-min-content 40px 103px;
   grid-template-rows: min-content min-content 40px 103px;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   row-gap: 25px;
   font-family: "Gilroy", "Arial", sans-serif;
   background-image: linear-gradient(var(--special-yellow) 115px, var(--basic-white) 115px);
@@ -613,7 +655,8 @@ img {
   bottom: 169px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 18px;
+  -moz-column-gap: 18px;
+       column-gap: 18px;
 }
 
 .slider-controls__item {
@@ -649,7 +692,8 @@ img {
 .popular__grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 }
 
 .popular__item {
@@ -823,18 +867,21 @@ img {
 .brands__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 }
 
 .brand {
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   opacity: 0.2;
   transition: all 0.5s ease-in-out;
 }
 
 .brand:hover,
 .brand:focus {
-  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
   opacity: 1;
 }
 
@@ -843,7 +890,8 @@ img {
 .info__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 }
 
 .info__column {
@@ -892,7 +940,8 @@ img {
 .shipping__company {
   display: flex;
   align-items: center;
-  column-gap: 24px;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
   margin-bottom: 15px;
   font-weight: 800;
   font-size: 16px;
@@ -966,7 +1015,8 @@ img {
   flex-wrap: wrap;
   max-width: 640px;
   margin-left: 5px;
-  column-gap: 33px;
+  -moz-column-gap: 33px;
+       column-gap: 33px;
 }
 
 .footer__bottom {
@@ -1013,7 +1063,8 @@ img {
 
 .socials__list {
   display: flex;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 
 .socials__link-icon {
@@ -1443,12 +1494,14 @@ img {
 }
 
 .sorting__list--first {
-  column-gap: 32px;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
 }
 
 .sorting__list--second {
   display: flex;
-  column-gap: 16px;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
   margin-left: auto;
 }
 
@@ -1494,7 +1547,8 @@ img {
   display: grid;
   margin-bottom: 40px;
   grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   row-gap: 48px;
 }
 
@@ -1635,7 +1689,8 @@ img {
 
 .pagination__list {
   display: flex;
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   max-width: 450px;
 }
 
@@ -1693,14 +1748,16 @@ img {
 
 .feedback-show {
   display: grid;
-  animation: bounce 0.7s;
+  -webkit-animation: bounce 0.7s;
+          animation: bounce 0.7s;
 }
 
 .feedback__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, auto);
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   row-gap: 32px;
 }
 
@@ -1754,6 +1811,14 @@ img {
   background-color: var(--status-invalid);
 }
 
+.field__input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.field__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
 .field__input::placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
@@ -1769,6 +1834,16 @@ img {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translate(-50%, -2000px);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
 
 @keyframes bounce {
