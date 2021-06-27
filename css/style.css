@@ -1624,7 +1624,8 @@ img {
   opacity: 0;
 }
 
-.product:hover .product__links-wrap {
+.product:hover .product__links-wrap,
+.product:focus-within .product__links-wrap {
   opacity: 1;
 }
 
