@@ -430,10 +430,6 @@ img {
   opacity: 0.3;
 }
 
-.nav__item--catalog:hover .nav__dropdown {
-  display: grid;
-}
-
 .nav__list--second {
   display: grid;
   width: 500px;
@@ -510,7 +506,8 @@ img {
   z-index: 200;
 }
 
-.nav__item--catalog:hover .nav__dropdown {
+.nav__item--catalog:hover .nav__dropdown,
+.nav__item--catalog:focus-within .nav__dropdown {
   position: absolute;
   left: 0;
   display: grid;
@@ -1746,7 +1743,7 @@ img {
   background-color: var(--basic-white);
 }
 
-.feedback-show {
+.modal-show {
   display: grid;
   -webkit-animation: bounce 0.7s;
           animation: bounce 0.7s;

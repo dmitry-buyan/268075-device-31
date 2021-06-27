@@ -7,15 +7,15 @@ const feedbackForm = feedback.querySelector(".feedback__form");
 
 const feedbackShow = function(evt) {
   evt.preventDefault();
-  feedback.classList.add("feedback-show");
+  feedback.classList.add("modal-show");
   userNameField.focus();
 };
 
 const feedbackHide = function(evt) {
   if (evt.target.classList.contains("button-close") || (evt.key === "Esc" || evt.key === "Escape")) {
-    if (feedback.classList.contains("feedback-show")) {
+    if (feedback.classList.contains("modal-show")) {
       evt.preventDefault();
-      feedback.classList.remove("feedback-show");
+      feedback.classList.remove("modal-show");
     }
   }
 };
