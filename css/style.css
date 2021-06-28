@@ -1750,6 +1750,10 @@ img {
           animation: bounce 0.7s;
 }
 
+.feedback--error {
+  animation: shake 0.5s;
+}
+
 .feedback__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1851,5 +1855,20 @@ img {
 
   100% {
     transform: translate(-50%, 0);
+  }
+}
+
+@keyframes shake {
+  from, to {
+    left: 15%;
+    transform: translate(0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(-5px, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate(5px, 0);
   }
 }
