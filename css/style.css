@@ -129,6 +129,7 @@ img {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-align: center;
+  vertical-align: middle;
   color: var(--basic-black);
   background-color: transparent;
   border: none;
@@ -1321,6 +1322,16 @@ img {
 .form-filter__input {
   border: none;
   background-color: transparent;
+}
+
+.form-filter__input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.form-filter__input[type="number"]::-webkit-outer-spin-button,
+.form-filter__input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .form-filter__button {

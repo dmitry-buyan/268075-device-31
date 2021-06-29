@@ -146,7 +146,8 @@
           <img class="logo__img" src="img/logo-header.svg" width="163" height="35" alt="Логотип магазина Девайс">
         </a>
         <form class="header__search-form search-form" method="GET" action="https://echo.htmlacademy.ru">
-          <input class="search-form__input" type="search" placeholder="Поиск по сайту">
+          <label for="search-form__label" class="visually-hidden">Поиск по сайту</label>
+          <input class="search-form__input" id="search-form__label" type="search" placeholder="Поиск по сайту">
           <button class="search-form__button" type="submit">Найти</button>
         </form>
         <div class="header__user user-block">
@@ -223,8 +224,8 @@
                   <div class="price__scale">
                     <div class="price__bar"></div>
                   </div>
-                  <button class="price__toggle price__toggle--min" type="button"></button>
-                  <button class="price__toggle price__toggle--max" type="button"></button>
+                  <button class="price__toggle price__toggle--min" type="button" aria-label="Минимальное значение: от"></button>
+                  <button class="price__toggle price__toggle--max" type="button" aria-label="Максимальное значение: до"></button>
                 </div>
                 <div class="price__controls form-filter__wrap-inner">
                   <div class="price__min-wrap">
