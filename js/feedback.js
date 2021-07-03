@@ -6,13 +6,15 @@ const userFeedback = feedback.querySelector("#contact-text");
 const feedbackCloseButton = feedback.querySelector(".feedback__button-close");
 const feedbackForm = feedback.querySelector(".feedback__form");
 
-const feedbackShow = function(evt) {
+const feedbackShow = (evt) => {
   evt.preventDefault();
   feedback.classList.add("modal-show");
   userNameField.focus();
 };
 
-const feedbackHide = function(evt) {
+const addErrorClass = () => feedback.classList.add("feedback--error");
+
+const feedbackHide = (evt) => {
   if (evt.target.classList.contains("button-close") || (evt.key === "Esc" || evt.key === "Escape")) {
     if (feedback.classList.contains("modal-show")) {
       evt.preventDefault();
@@ -21,24 +23,26 @@ const feedbackHide = function(evt) {
   }
 };
 
-const validateForm = function(evt) {
-  if (!userNameField.value) {
+const validateForm = (evt) => {
+  const data = new FormData(evt.target);
+
+  if (data.get("username") === "") {
     evt.preventDefault();
-    feedback.classList.add("feedback--error");
+    addErrorClass();
   } else {
-    localStorage.setItem("username", userNameField.value);
+    localStorage.setItem("username", data.get("username"));
   }
 
-  if (!userEmail.value) {
+  if (data.get("email") === "") {
     evt.preventDefault();
-    feedback.classList.add("feedback--error");
+    addErrorClass();
   } else {
-    localStorage.setItem("email", userEmail.value);
+    localStorage.setItem("email", data.get("email"));
   }
 
-  if (!userFeedback.value) {
+  if (data.get("text") === "") {
     evt.preventDefault();
-    feedback.classList.add("feedback--error");
+    addErrorClass();
   }
 }
 

@@ -503,15 +503,15 @@
       <form class="feedback__form form" method="GET" action="https://echo.htmlacademy.ru">
         <div class="field">
           <label class="field__name" for="contact-username">Ваше имя:</label>
-          <input class="field__input" id="contact-username" type="text" placeholder="Имя Фамилия">
+          <input class="field__input" id="contact-username" name="username" type="text" placeholder="Имя Фамилия">
         </div>
         <div class="field">
           <label class="field__name" for="contact-email">Ваш e-mail:</label>
-          <input class="field__input" id="contact-email" type="email" placeholder="email@example.com">
+          <input class="field__input" id="contact-email" name="email" type="email" placeholder="email@example.com">
         </div>
         <div class="field field--max">
           <label class="field__name" for="contact-text">Текст письма:</label>
-          <textarea class="field__input field__input--textarea field__input--isresize" id="contact-text" placeholder="В свободной форме"></textarea>
+          <textarea class="field__input field__input--textarea field__input--isresize" id="contact-text" name="text" placeholder="В свободной форме"></textarea>
         </div>
         <button class="feedback__button button" type="submit">Отправить</button>
       </form>
